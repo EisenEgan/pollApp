@@ -1,14 +1,14 @@
 <div class="row content">
   <div class="col-xs-12 col-sm-10 col-sm-offset-1">
     <h1>Make a new poll!</h1>
-    <form action="/newpoll" method="post" role="form">
+    <form ng-submit="submit()" role="form">
       <div class="form-group">
         <label for="usr">Title:</label>
-        <input id="usr" name="title" class="form-control"/>
+        <input name="name" class="form-control" ng-model="data.name"/>
       </div>
       <div class="form-group">
-        <label for="comment">Comment:</label>
-        <textarea id="comment" rows="5" name="options" class="form-control"></textarea>
+        <label for="comment">Options (seperated by line):</label>
+        <textarea rows="5" name="options" class="form-control" ng-model="data.options"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Make!</button>
     </form>

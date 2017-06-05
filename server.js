@@ -20,6 +20,10 @@ app.use(bodyParser.json())
 // Add routing
 app.use('/api', routes);
 
+app.get('*', function(req, res) {
+  res.sendfile('./public/index.html')
+})
+
 var server = app.listen(app.get('port'), function() {
   var port = server.address().port;
   console.log('App running on port', port);

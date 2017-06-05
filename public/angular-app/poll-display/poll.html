@@ -10,10 +10,9 @@
                 ng-change="update()">
           <option value="">Choose an option...:</option>
         </select>
-        <!-- <h1 ng-show="{{ showInput }}">SOMETHING WORKED</h1> -->
         <div class="userChosenOption" ng-show="showInput">
           <label for="newOption">Vote with my own option:</label>
-          <input id="newOption" name="newOption" class="form-control"/>
+          <input id="newOption" name="newOption" class="form-control" ng-model="custom"/>
         </div>
       </div>
       <button type="submit" class="btn btn-primary btn-block pollbtn">Submit</button>

@@ -17,8 +17,18 @@ function pollDataService($resource, baseUrl) {
   }
 
   this.createPoll = function(poll) {
-
+    return new pollResource(poll).$save()
   }
+  // $scope.pollResource = $resource('http://localhost:3000/api/polls')
+  // $scope.submit = function() {
+  //   var data = {}
+  //   angular.copy($scope.data, data);
+  //   data.options = data.options.split(/\r|\n/)
+  //   new $scope.pollResource(data).$save().then((newPoll) => {
+  //     console.log(newPoll)
+  //     $location.path("/")
+  //   })
+  // }
 
   this.pollInfo = function(id) {
     var herp = {"_id": id}

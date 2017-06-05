@@ -13,6 +13,11 @@ function config($routeProvider, $locationProvider) {
       controller: PollController,
       controllerAs: 'vm'
     })
+    .when('/newpoll', {
+      templateUrl: 'angular-app/poll-create/create.html',
+      controller: CreateController,
+      controllerAs: 'vm'
+    })
 }
 
 // angular.module('pollApp')

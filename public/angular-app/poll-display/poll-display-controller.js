@@ -1,8 +1,20 @@
 angular.module('pollApp').controller('PollController', PollController);
 
-function PollController($scope, $routeParams, pollDataService ) {
+function PollController($scope, $routeParams, pollDataService, $http ) {
   $scope.vote = function() {
-
+    if($scope.selected != 'Add an option') {
+      console.log('Option selected')
+    }
+    if($scope.selected == 'Add an option' && $scope.custom) {
+      console.log($scope.custom)
+    }
+    // Find ip with Server side API
+    // var ipFinder = 'http://ipv4.myexternalip.com/json';
+    // $http.get(ipFinder).then(function(result) {
+    //     console.log(result.data.ip)
+    // }, function(e) {
+    //     alert("error");
+    // })
   }
   pollDataService.data.get({id: $routeParams.id}).$promise.then((data) => {
     var optionsLength = data.options.length
