@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="pollApp">
+<head>
+  <base href="/">
+  <title>All Polls | fcc-voting</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <div class="row navbar-inner">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">fcc-voting</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active link"><a href="/">Home</a></li>
+              <li class="dropdown">
+                <p class="navbar-btn">
+                  <button id="signIn" class="btn btn-info">Sign in with Twitter</button>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div ng-view></div>
+    <div class="row">
+      <footer>
+        <p>This "fcc-voting" app is built by <a href="https://www.freecodecamp.com/eisenegan">@EisenEgan</a> of freecodecamp,</p>
+        <p>following the instructions of <a href="http://freecodecamp.com/challenges/basejump-build-a-voting-app">"Basejump: Build a Voting App | Free Code Camp".</a></p>
+        <p>Github repository: <a href="https://github.com/EisenEgan/poll">EisenEgan/poll</a></p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="scripts/jquery-3.2.1.min.js"></script>
+  <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/angular-route/angular-route.js"></script>
+  <script src="node_modules/angular-resource/angular-resource.js"></script>
+  <script src="angular-app/app.js"></script>
+  <script src="angular-app/poll-list/poll-list-controller.js"></script>
+  <script src="angular-app/poll-display/poll-display-controller.js"></script>
+  <script src="angular-app/poll-data-service/poll-data-service.js"></script>
+</body>
+</html>

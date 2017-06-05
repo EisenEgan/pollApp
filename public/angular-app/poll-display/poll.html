@@ -1,0 +1,30 @@
+<div class="row content">
+  <div class="col-xs-12 col-sm-4">
+    <h3>{{ details.name }}</h3>
+    <form ng-submit="vote()" role="form">
+      <div class="form-group">
+        <label for="sel1">I'd like to vote for...:</label>
+        <select ng-options="option for option in details.options"
+                ng-model="selected"
+                class="form-control"
+                ng-change="update()">
+          <option value="">Choose an option...:</option>
+        </select>
+        <!-- <h1 ng-show="{{ showInput }}">SOMETHING WORKED</h1> -->
+        <div class="userChosenOption" ng-show="showInput">
+          <label for="newOption">Vote with my own option:</label>
+          <input id="newOption" name="newOption" class="form-control"/>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block pollbtn">Submit</button>
+      <a href="" title="twitter" target="_blank" style="text-decoration:none" class="twitterButton customer share">
+        <button type="button" class="btn btn-info btn-block pollbtn"><i aria-hidden="true" class="fa fa-twitter"></i> Share on Twitter</button>
+      </a>
+    </form>
+  </div>
+  <div class="col-xs-12 col-sm-8 chart">
+    <div id="canvasHolder">
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+</div>

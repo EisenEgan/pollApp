@@ -9,10 +9,8 @@ module.exports.pollsGetAll = function(req, res) {
 }
 
 module.exports.pollsAddOne = function(req, res) {
-  console.log("req.body")
-  console.log(req.body)
+  req.body.votes = Array(req.body.options.length).fill(0)
   var newPoll = new Poll(req.body);
-  console.log(newPoll)
   newPoll.save(function(err) {
     if (err) throw err;
     res.json(newPoll)

@@ -11,7 +11,7 @@ var pollSchema = new mongoose.Schema({
   },
   votes: {
     type: [Number],
-    default: []
+    required: true
   },
   userVotes: {
     type: [String],

@@ -1,0 +1,10 @@
+<div class="row content">
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
+    <h1>fcc-voting</h1>
+    <h5>Below are polls hosted by fcc-voting.</h5>
+    <h5>Select a poll to see the results and vote, or sign-in to make a new poll.</h5>
+    <div class="btn-group-vertical btn-block">
+      <a href="/polls/{{poll._id}}" role="button" class="btn btn-default" ng-repeat="poll in pollList">{{ poll.name }}</a>
+    </div>
+  </div>
+</div>
