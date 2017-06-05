@@ -10,7 +10,7 @@ router
   .post(ctrlPolls.pollsAddOne)
 
 router
-  .route('/polls/:pollId')
+  .route('/polls/:id')
   .get(ctrlPolls.pollsGetOne)
   .put(ctrlPolls.pollsUpdateOne)
   .delete(ctrlPolls.pollsDeleteOne)

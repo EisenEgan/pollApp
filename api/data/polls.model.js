@@ -9,6 +9,10 @@ var pollSchema = new mongoose.Schema({
     type: [String],
     required: true
   },
+  votes: {
+    type: [Number],
+    default: []
+  },
   userVotes: {
     type: [String],
     default: []
